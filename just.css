@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.p-rel{position: relative;}
+.p-abs{position: absolute;}
+
+.d-flex{display: flex;}
+.d-block{display: block;}
+.d-none{display: none;}
+
+.overflow-hidden{overflow: hidden;}
+
+.w-100 {width: 100%;}
+
+.container{ width:1200px; margin: 0 auto;}
+
+.justify-center{justify-content: center;}
+.justify-between{justify-content: space-between;}
+
+.align-center{align-items: center;}
+
+.nav{
+    text-align: center; 
+    height: 100px;
+}
+
+.d1ul{
+    position: relative;
+}
+.d1li{
+    position: relative;
+    border: 1px solid black; 
+}
+
+.d1li:hover{
+    background-color: black;
+}
+.d1li:hover > .d1a {
+    color:white;
+}
+
+.d1li > a {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    line-height: 3;
+    padding: 0 30px;
+}
+
+.d2ul{
+    width: 100%;
+    transition: 0.5s;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+}
+.d1ul::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color:rgb(223, 213, 78);   
+    transition: 0.5s;
+    z-index: -1;
+    top: 100%;
+}
+.d1ul:hover:after{
+    height: 200px;
+}
+
+
+.d1ul:hover .d2ul{
+    height:  300px;
+      
+}
+.d2a{
+    line-height: 2;
+}
+.d2li:hover{
+    background-color: black;
+}
+.d2li:hover >a {
+    color: gold;
+}
+
+
+/* 슬라이드 구간 시작 */
+
+.slidercontainer{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slidewrap{
+    position: absolute;
+}
+.slide{
+    position: relative;
+    line-height: 0;
+}
+
+.slide p{position:absolute;left:50%; top:50%; transform: translate(-50%, -50%);
+     color:#fff; background: #000; border-radius: 50px; padding: 10px 20px;}
